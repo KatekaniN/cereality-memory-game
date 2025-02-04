@@ -1,0 +1,204 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    cursor: url('assets/image-30-Photoroom.png'), pointer;
+    margin: 0; 
+}
+
+.background {
+    background-image: url('assets/image-23.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.logo {
+    max-width: 90%;
+    height: auto; 
+    margin: 30px auto 100px;
+    display: block; 
+}
+
+h1 {
+    margin-top: 40px;
+    color: #2D8A2A;
+    font-size: 2.5rem;
+}
+
+.card-image {
+    max-width: 100%; 
+    height: auto; 
+    cursor: url('assets/image-30-Photoroom.png'), pointer;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 90vw;
+}
+
+.hyena {
+    position: absolute;
+    width: auto; 
+    right: 20px !important; 
+    height: 150px;
+    z-index: 1000;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+    display: none; 
+}
+
+.card {
+    width: 100%;
+    height: 0; 
+    padding-bottom: 100%;
+    background-color: #2D8A2A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: transparent;
+    font-size: 4rem; 
+    transition: transform 0.3s;
+    cursor: url('assets/image-30-Photoroom.png'), pointer;
+    position: relative; 
+}
+
+.card img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: none;
+}
+
+.card.revealed img {
+    display: block;
+}
+
+.card.revealed {
+    background-color: #2D8A2A;
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    background-color: #2D8A2A;
+    color: #333;
+    pointer-events: none;
+}
+
+.victory-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #2D8A2A;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    font-size: 1.5rem; 
+    border-radius: 50px;
+    max-width: 90%; 
+    box-sizing: border-box;
+}
+
+.victory-message img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%; 
+    height: auto;
+}
+
+.victory-message button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    color: white;
+    font-size: 1.25rem; 
+    background-color: #2D8A2A;
+    border: none;
+    border-radius: 50px;
+}
+
+.victory-message button:hover {
+    font-size: 1.375rem;
+}
+
+.restart-button,
+.instructions-button, .music-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    padding: 8px 16px;
+    background-color: #2D8A2A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; 
+    cursor: pointer;
+    z-index: 1000;
+    cursor: url('assets/image-30-Photoroom.png'), pointer;
+}
+
+.restart-button {
+    right: 20px;
+}
+
+.instructions-button {
+    right: 150px; 
+}
+
+.music-toggle-button {
+    right: 300px;
+}
+
+.restart-button:hover,
+.instructions-button:hover, .music-toggle-button:hover {
+    background-color: #c6bdbd;
+    color: #2D8A2A;
+}
+
+.instructions-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #2D8A2A;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%; 
+    box-sizing: border-box;
+}
+
+.instructions-content {
+    text-align: center;
+    color: #2D8A2A;
+    font-size: 1.25rem; 
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.25rem; 
+    color: #2D8A2A;
+    cursor: pointer;
+    cursor: url('assets/image-30-Photoroom.png'), pointer;
+}
+
+@media screen and (max-width: 600px) {
+   
+    
+}
